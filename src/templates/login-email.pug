@@ -1,0 +1,30 @@
+extends layouts/section
+
+append vars
+	- var title = "Login - Email"
+	- var sectionTitle = "Login"
+
+block sectionPicture
+	i(aria-hidden="true").fa.fa-user-circle.menu-links-item-i.section-heading-picture-font
+
+block sectionContent
+	.login
+		form.login-form
+			.login-form-wrap
+				label(for="username").login-form-label= "Login"
+				.login-form-input.view-username
+					input(type="text", name="username", id="username").login-form-input-in
+			.login-form-wrap
+				label(for="password").login-form-label= "Password"
+				.login-form-input.view-password
+					input(type="password", name="password", id="password").login-form-input-in
+
+			.login-form-backup
+				.login-form-backup-check
+					input(type="checkbox", name="forgotPassword", id="forgotPassword").login-form-backup-check-in
+					label(for="forgotPassword").login-form-backup-check= "Pamatovat heslo"
+				a(href="#").login-form-link= "Zapomenuté heslo"
+
+			.login-form-buttons
+				a(href="#").login-form-buttons-new= "Create new account"
+				input(type="submit", name="submit", id="submit", value="Login").login-form-buttons-submit

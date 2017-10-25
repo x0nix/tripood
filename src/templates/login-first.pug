@@ -1,0 +1,25 @@
+extends layouts/section
+
+append vars
+	- var title = "Login"
+	- var sectionTitle = "Login"
+
+block sectionPicture
+	i(aria-hidden="true").fa.fa-user-circle.menu-links-item-i.section-heading-picture-font
+
+block sectionContent
+	div.login
+		a(href= "#").login-btn-method.view-facebook
+			div.login-btn-method-icon
+				i(aria-hidden="true").fa.fa-facebook
+			p.login-btn-method-text= "Přihlásit se pomocí Facebooku"
+
+		a(href= "#").login-btn-method.view-gmail
+			div.login-btn-method-icon
+				i(aria-hidden="true").fa.fa-google
+			p.login-btn-method-text= "Přihlásit se pomocí Gmailu"
+
+		a(href= "/login-email.html").login-btn-method.view-email
+			div.login-btn-method-icon
+				i(aria-hidden="true").fa.fa-envelope
+			p.login-btn-method-text= "Přihlásit se pomocí Emailu"

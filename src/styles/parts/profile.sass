@@ -1,0 +1,82 @@
+.profile
+  margin-top: 30px
+
+  &-info
+    margin: 0 auto
+    padding: 20px 0
+    border-bottom: 1px solid $c-text-back
+    width: 100%
+    max-width: 500px
+    &-title
+      font-size: 17px
+      margin: 0 0 15px
+    &-text
+      font-size: 15px
+      margin: 0
+    &-span
+      font-weight: normal
+      font-size: 15px
+      margin-left: 10px
+
+    &:last-child
+      padding-bottom: 0
+      border-bottom: none
+
+  &-option
+    +flex(space-between, center)
+    color: $c-text
+    width: 95%
+    margin: 15px auto
+    background: #fff
+    padding: 10px
+    transition: 300ms
+
+    &:hover
+      background-color: #fbfbfb
+    &:hover &
+      &-next
+        transform: translateX(0)
+
+    &-wrap
+      +flex(flex-start, center)
+
+    &-img
+      +sizes(80px, 80px)
+      min-width: 80px
+      +flex(center, center)
+      border-radius: 50%
+      font-size: 40px
+      color: white
+
+      &.view-movie
+        background-color: rgb(241,171,60)
+      &.view-friends
+        background-color: rgb(82,69,205)
+      &.view-favorite
+        background-color: rgb(74,163,63)
+      &.view-reactions
+        background-color: rgb(203,174,69)
+
+    &-info
+      margin-left: 15px
+
+      &-title
+        margin: 0 0 5px
+        font-size: 20px
+
+      &-text
+        margin: 0
+        font-size: 16px
+
+    &-next
+      display: none
+      font-size: 70px
+      transform: translateX(-10px)
+      transition: 300ms
+
+  +media(500)
+    &-option
+      &-next
+        display: inline
+
+

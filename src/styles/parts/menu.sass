@@ -1,0 +1,62 @@
+$barWidth: 33px
+$barHeight: 5px
+
+.menu
+	+sticky(0px 0px)
+	+sizes(100%, 60px)
+
+	+flex(space-between, center)
+	background-color: $c-main
+	z-index: 9999
+
+	&.active .menu
+		&-nav-bar
+			&:nth-child(1)
+				transform: rotate(45deg) translate(0px, ($barHeight / -2))
+
+			&:nth-child(2)
+				opacity: 0
+
+			&:nth-child(3)
+				transform: rotate(-45deg) translate(0px, ($barHeight / 2))
+
+	&-nav
+		+flex(space-between, center)
+
+		&-bars
+			margin-left: 15px
+			position: relative
+			height: 25px
+			width: $barWidth
+			cursor: pointer
+
+		&-bar
+			+sizes($barWidth, $barHeight)
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: ($barHeight / -2)
+			background-color: #fff
+			border-radius: 3px
+			transition: 300ms
+
+			&:nth-child(1)
+				top: 0
+				margin-top: 0
+				transform-origin: 0 50%
+
+			&:nth-child(3)
+				top: auto
+				bottom: 0
+				transform-origin: 0 50%
+
+	&-links
+		+flex(space-between, center)
+		margin-right: 15px
+
+		&-item
+			font-size: 23px
+			color: #fff
+			margin: 0 6px
+
+

@@ -1,0 +1,61 @@
+extends layouts/section
+
+append vars
+    - var title = "Profile"
+    - var sectionTitle = "Profile"
+
+block sectionPicture
+    img(src="https://picsum.photos/200").fa.fa-user-circle.menu-links-item-i.section-heading-picture-img
+
+block sectionContent
+    .profile
+        .profile-info
+            h3.profile-info-title Informace:
+            p.profile-info-text Jmenuji se John Simon, velmi mnoho cestuji po celém světě. Kdyby jste potřebovali cokoliv vědět, rád pomohu. Můžeme připadně cestovat společně.
+        .profile-info
+            h3.profile-info-title Editovat profil:
+            a(href="#").btn.view-edit Editovat profil
+        .profile-info
+            h3.profile-info-title Jazyk:
+                span.profile-info-span English Deutsch
+            h3.profile-info-title Website:
+                span.profile-info-span www.blog.com
+
+block otherContent
+    a(href="#").profile-option
+        .profile-option-wrap
+            .profile-option-img.view-movie
+                i(aria-hidden="true").fa.fa-video-camera
+            .profile-option-info
+                h2.profile-option-info-title Movie Holiday
+                p.profile-option-info-text Přehled a nastavení holiday videí
+        i(aria-hidden="true").fa.fa-arrow-circle-right.profile-option-next
+
+    a(href="#").profile-option
+        .profile-option-wrap
+            .profile-option-img.view-friends
+                i(aria-hidden="true").fa.fa-users
+            .profile-option-info
+                h2.profile-option-info-title Friends
+                p.profile-option-info-text Přehled a nastavení přátel
+        i(aria-hidden="true").fa.fa-arrow-circle-right.profile-option-next
+
+    a(href="#").profile-option
+        .profile-option-wrap
+            .profile-option-img.view-favorite
+                i(aria-hidden="true").fa.fa-heart
+            .profile-option-info
+                h2.profile-option-info-title Oblíbené videa
+                p.profile-option-info-text Videa, které máte v oblíbených
+        i(aria-hidden="true").fa.fa-arrow-circle-right.profile-option-next
+
+    a(href="#").profile-option
+        .profile-option-wrap
+            .profile-option-img.view-reactions
+                i(aria-hidden="true").fa.fa-comment
+            .profile-option-info
+                h2.profile-option-info-title Zprávy a reakce
+                p.profile-option-info-text Zprávy videa ostatních lidí
+        i(aria-hidden="true").fa.fa-arrow-circle-right.profile-option-next
+
+
