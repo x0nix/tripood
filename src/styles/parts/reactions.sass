@@ -1,0 +1,22 @@
+.reactions
+  &-item
+    padding: 15px 15px
+    +flex(flex-start, center)
+    border-bottom: 1px solid #f1f1f1
+    &-picture
+      $ratio: 50px
+      $halfRatio: ($ratio / 2)
+      +size($ratio $ratio)
+      +flex(center, center)
+      border: 2px solid $c-text-light
+      border-radius: $halfRatio
+      overflow: hidden
+      color: #fff
+      min-width: $ratio
+      margin-right: 20px
+      font-size: 27px
+
+    &-text
+      font-size: 15px
+      line-height: 17px
+      margin: 0

@@ -1,0 +1,31 @@
+extends layouts/section
+
+append vars
+    - var title = "Zprávy a Reakce"
+    - var sectionTitle = "Zprávy a Reakce"
+    - var sectionText = "Vytvářejte videa z dovolené a nastavujte si práva, kdo může video vidět. Vše zdarma. Pokud si nebudete vědět rady, můžete využít tutorial, který vám pomůže."
+    - var sectionTrio = {links: ["Vše", "Zprávy", "Reakce"]}
+
+block sectionPicture
+    .section-heading-picture.view-reactions
+        i(aria-hidden="true").fa.fa-comment.section-heading-picture-font.view-smaller
+
+block afterTrioContent
+    .reactions
+        .reactions-item
+            .reactions-item-picture.view-reactions
+                i(aria-hidden="true").fa.fa-comment
+            p.reactions-item-text Johnes Simons okomentoval fotografii zájezdu Svycarsko v lete
+        .reactions-item
+            .reactions-item-picture.view-friends
+                i(aria-hidden="true").fa.fa-users
+            p.reactions-item-text Johnes Simons stali jste se přáteli s Markem Johnem
+        .reactions-item
+            .reactions-item-picture.view-favorite
+                i(aria-hidden="true").fa.fa-heart
+            p.reactions-item-text Johnes Simons přidal oblíbené fotografii Svycarsko
+        .reactions-item
+            .reactions-item-picture.view-reactions
+                i(aria-hidden="true").fa.fa-comment
+            p.reactions-item-text Johnes Simons poslal zprávu
+
