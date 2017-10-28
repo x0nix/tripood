@@ -5,7 +5,8 @@ append vars
     - var sectionTitle = "Profile"
 
 block sectionPicture
-    img(src="https://picsum.photos/200").fa.fa-user-circle.menu-links-item-i.section-heading-picture-img
+    .section-heading-picture
+        img(src="https://picsum.photos/200").fa.fa-user-circle.menu-links-item-i.section-heading-picture-img
 
 block sectionContent
     .profile
@@ -22,7 +23,7 @@ block sectionContent
                 span.profile-info-span www.blog.com
 
 block otherContent
-    a(href="#").profile-option
+    a(href="/movieholiday.html").profile-option
         .profile-option-wrap
             .profile-option-img.view-movie
                 i(aria-hidden="true").fa.fa-video-camera
@@ -40,7 +41,7 @@ block otherContent
                 p.profile-option-info-text Přehled a nastavení přátel
         i(aria-hidden="true").fa.fa-arrow-circle-right.profile-option-next
 
-    a(href="#").profile-option
+    a(href="/favorite.html").profile-option
         .profile-option-wrap
             .profile-option-img.view-favorite
                 i(aria-hidden="true").fa.fa-heart

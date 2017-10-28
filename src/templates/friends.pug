@@ -3,14 +3,15 @@ extends layouts/section
 append vars
     - var title = "Friends"
     - var sectionTitle = "Friends"
-    - var sectionText = "ALSkd asdaslkdn alsdnalsnd alsblasb d"
+    - var sectionText = "Vytvářejte videa z dovolené a nastavujte si práva, kdo může video vidět. Vše zdarma. Pokud si nebudete vědět rady, můžete využít tutorial, který vám pomůže."
     - var sectionTrio = {links: ["Přátelé", "Sleduji", "Mě sleduje"]}
 
 block sectionPicture
-    i(aria-hidden="true").fa.fa-users.section-heading-picture-font.view-friends
+    .section-heading-picture.view-friends
+        i(aria-hidden="true").fa.fa-users.section-heading-picture-font.view-smaller
 
-block otherContent
-    .friends.view-sectionlook
+block afterTrioContent
+    .friends
         a(href="#").friends-item
             p.friends-item-name John Simons
             .friends-item-picture

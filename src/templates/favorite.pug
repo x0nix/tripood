@@ -1,0 +1,17 @@
+extends layouts/section
+
+append vars
+    - var title = "Favorite"
+    - var sectionTitle = "Favorite"
+    - var sectionText = "Vytvářejte videa z dovolené a nastavujte si práva, kdo může video vidět. Vše zdarma. Pokud si nebudete vědět rady, můžete využít tutorial, který vám pomůže."
+    - var sectionTrio = {links: ["Videa", "Cesty", "Uživatelé"]}
+
+block sectionPicture
+    .section-heading-picture.view-favorite
+        i(aria-hidden="true").fa.fa-heart.section-heading-picture-font.view-smaller
+
+block afterTrioContent
+    .video
+        video(controls).video-src
+            source(src="https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/576/8/202884524/687898845.mp4?token=1509221476-0xb9a1af6c5db68fad2b64ebf48ec5cff951b8f994" type="video/mp4")
+        p.video-text NEW YEAR: New York, USA to Stockholm, Sweden for only $273 roudtrip

@@ -2,26 +2,30 @@ extends default
 
 block content
 	.section
-		.section-heading
-			h1.section-heading-title= sectionTitle
+		.section-in
+			.section-heading
+				h1.section-heading-title= sectionTitle
 
-			div.section-heading-picture
 				block sectionPicture
 
-		a(href="#").section-return.btn Zpět
+			a(href="#").section-return.btn Zpět
 
-		if sectionText
-			p.section-text= sectionText
+			if sectionText
+				p.section-text= sectionText
 
-		block sectionContent
+			block sectionContent
 
-	if sectionTrio
-		.section-trio.view-sectionlook
-			.section-trio-links
-				a(href="#").section-trio-links-item.active-item= sectionTrio.links[0]
-				a(href="#").section-trio-links-item= sectionTrio.links[1]
-				a(href="#").section-trio-links-item= sectionTrio.links[2]
-			.section-trio-line
+		block sectionOuterContent
+
+		if sectionTrio
+			.section-trio
+				.section-trio-links
+					a(href="#").section-trio-links-item.active-item= sectionTrio.links[0]
+					a(href="#").section-trio-links-item= sectionTrio.links[1]
+					a(href="#").section-trio-links-item= sectionTrio.links[2]
+				.section-trio-line
+
+			block afterTrioContent
 
 	block otherContent
 
