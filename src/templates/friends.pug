@@ -1,0 +1,25 @@
+extends layouts/section
+
+append vars
+    - var title = "Friends"
+    - var sectionTitle = "Friends"
+    - var sectionText = "ALSkd asdaslkdn alsdnalsnd alsblasb d"
+    - var sectionTrio = {links: ["Přátelé", "Sleduji", "Mě sleduje"]}
+
+block sectionPicture
+    i(aria-hidden="true").fa.fa-users.section-heading-picture-font.view-friends
+
+block otherContent
+    .friends.view-sectionlook
+        a(href="#").friends-item
+            p.friends-item-name John Simons
+            .friends-item-picture
+                img(src="https://picsum.photos/200").friends-item-picture-img
+        a(href="#").friends-item
+            p.friends-item-name John Simons
+            .friends-item-picture
+                img(src="https://picsum.photos/200").friends-item-picture-img
+        a(href="#").friends-item
+            p.friends-item-name John Simons
+            .friends-item-picture
+                img(src="https://picsum.photos/200").friends-item-picture-img

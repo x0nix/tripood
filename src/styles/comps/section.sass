@@ -19,6 +19,7 @@
 			$halfRatio: ($ratio / 2)
 			+sizes($ratio, $ratio)
 			+absolute(auto 0px (-$halfRatio) auto)
+			+flex(center, center)
 			border: 3px solid $c-text-light
 			background-color: $c-text-light
 			border-radius: $halfRatio
@@ -35,6 +36,47 @@
 			&-font
 				font-size: 114px
 				color: #fff
+
+	&-return
+		color: black
+		margin-top: 10px
+		border: 1px solid #f1f1f1
+		font-size: 18px
+
+		&:hover
+			background: #f1f1f1
+
+			&::before
+				transform: translateX(-10px)
+
+		&::before
+			content: "\f060"
+			display: inline-block
+			color: black
+			margin-right: 10px
+			transition: 200ms
+
+	&-text
+		font-size: 13px
+		margin-top: 30px
+
+	&-trio
+		&-links
+			+flex(flex-start, center)
+			&-item
+				display: block
+				padding: 10px 30px
+				color: black
+				transition: 200ms
+				&:not(.active-item):hover
+					opacity: .7
+				&.active-item
+					cursor: default
+					color: #fff
+					background-color: rgb(195,196,197)
+		&-line
+			+size(100% 20px)
+			background-color: rgb(195,196,197)
 
 
 

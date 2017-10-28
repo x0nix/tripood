@@ -1,0 +1,34 @@
+.friends
+  &-item
+    +flex(space-between, center)
+    transition: 200ms
+    border-bottom: 1px solid #f1f1f1
+
+    &:hover
+      background-color: #fbfbfb
+
+    &-name
+      color: black
+      text-align: center
+      flex-grow: 1
+      margin: 0
+      font-size: 26px
+
+    &-picture
+      $ratio: 100px
+      $halfRatio: ($ratio / 2)
+      +sizes($ratio, $ratio)
+      +flex(center, center)
+      border: 3px solid $c-text-light
+      background-color: $c-text-light
+      border-radius: $halfRatio
+      overflow: hidden
+      margin: 10px 20px
+
+      &-img
+        +sizes(100%, 100%)
+        transition: 300ms
+
+        &:hover
+          transform: scale(1.1)
+

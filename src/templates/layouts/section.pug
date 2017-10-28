@@ -8,6 +8,20 @@ block content
 			div.section-heading-picture
 				block sectionPicture
 
+		a(href="#").section-return.btn Zpět
+
+		if sectionText
+			p.section-text= sectionText
+
 		block sectionContent
 
+	if sectionTrio
+		.section-trio.view-sectionlook
+			.section-trio-links
+				a(href="#").section-trio-links-item.active-item= sectionTrio.links[0]
+				a(href="#").section-trio-links-item= sectionTrio.links[1]
+				a(href="#").section-trio-links-item= sectionTrio.links[2]
+			.section-trio-line
+
 	block otherContent
+
