@@ -1,0 +1,53 @@
+extends layouts/section
+
+append vars
+    - var title = "Nový zájezd"
+    - var sectionTitle = "Nový zájezd"
+
+block sectionPicture
+    .section-heading-picture.view-blue
+        h2.section-heading-picture-title Step
+        .section-heading-picture-numbers
+            p.section-heading-picture-numbers-p.active-p 1
+            p.section-heading-picture-numbers-p 2
+            p.section-heading-picture-numbers-p 3
+
+block sectionContent
+    .steps-inputs
+        label(for="name").steps-inputs-label Název zájedu
+        input(type="text" id="name" name="name" placeholder="Zadejte popisný text").steps-inputs-input
+    .steps-inputs
+        label(for="day").steps-inputs-label Datum zájezdu
+        .steps-inputs-dates
+            input(type="number" id="day" name="day" placeholder="Den" maxlength="2").steps-inputs-dates-date
+            input(type="number" id="month" name="month" placeholder="Měsíc" maxlength="2").steps-inputs-dates-date
+            input(type="number" id="year" name="year" placeholder="Rok" maxlength="4").steps-inputs-dates-date
+
+block sectionOuterContent
+    .steps-days
+        h3.steps-days-title Dny zájezdů
+        .steps-days-items
+            .steps-days-items-wrapper
+                a(href="#").steps-days-items-item All
+                a(href="#").steps-days-items-item.active-item 1
+                    span Day
+                a(href="#").steps-days-items-item 2
+                    span Day
+            a(href="#").steps-days-items-add
+                i(aria-hidden="true").fa.fa-plus
+
+    .steps-current
+        .steps-current-wrapper
+            .steps-current-icon
+                i(aria-hidden="true").fa.fa-calendar-o
+            p.steps-current-title Day 1
+
+        p.steps-current-start Start
+
+    .steps-add
+        i(aria-hidden="true").fa.fa-plus.steps-add-plus
+        i(aria-hidden="true").fa.fa-map-marker.steps-add-location
+
+    
+
+

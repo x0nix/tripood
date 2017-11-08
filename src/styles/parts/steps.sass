@@ -1,0 +1,119 @@
+.steps
+  &-inputs
+    padding-top: 10px
+
+    &:nth-child(3)
+      padding: 15px 0
+      border-bottom: 1px solid #f1f1f1
+
+    &-label
+      font-size: 18px
+      color: $c-main
+
+    &-input
+      +size(100% 50px)
+      border: 1px solid #f1f1f1
+      padding-left: 15px
+      margin-top: 5px
+
+    &-dates
+      +flex(space-between, center)
+      margin-top: 5px
+
+      &-date
+        +size(100% 50px)
+        border: 1px solid #f1f1f1
+        padding-left: 15px
+        margin: 0 5px
+
+  &-days
+    &-title
+      width: 100%
+      padding: 10px 15px
+      margin: 0
+      color: #fff
+      background-color: rgb(195,196,197)
+
+    &-items
+      +flex(space-between, center)
+      +size(100% 50px)
+      margin-bottom: 14px
+      background-color: #fff
+
+      &-wrapper
+        +flex(flex-start, center)
+        +size(100% 50px)
+
+      &-item
+        +flex(center, center, column)
+        +size(50px 100%)
+        +relative()
+        margin: 0
+        text-align: center
+        color: $c-text
+
+        &::before
+          content: ''
+          +absolute(calc(100% - 10px) null null 50%)
+          transform: translateX(-50%) rotate(45deg)
+          +size(20px)
+          background-color: rgb(195,196,197)
+          display: none
+          z-index: -1
+
+        span
+          display: block
+          margin-top: -5px
+
+        &.active-item
+          color: #fff
+          background-color: rgb(195,196,197)
+
+          &::before
+            display: block
+
+      &-add
+        +flex(center, center)
+        +size(43px)
+        margin-right: 5px
+        background-color: #4aa33f
+        justify-self: flex-end
+        color: #fff
+        opacity: .8
+
+  &-current
+    +flex(space-between, center)
+    width: 100%
+    color: #fff
+    background-color: rgb(195,196,197)
+    padding: 10px 15px
+
+    &-wrapper
+      +flex(center, center)
+
+    &-title,
+    &-start
+      margin: 0
+      font-size: 18px
+
+    &-title
+      padding-left: 10px
+
+  &-add
+    +flex(center, center, column)
+    +size(80px)
+    border-radius: 50%
+    background-color: $c-main
+    color: #fff
+    font-size: 20px
+    margin: 15px auto
+    cursor: pointer
+
+    &-plus
+      opacity: .7
+
+    &-location
+      height: auto
+      font-size: 45px
+
+

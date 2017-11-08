@@ -2,10 +2,10 @@
 	width: 95%
 	max-width: 600px
 	margin: 0 auto
-	background-color: #fff
 	margin-top: 10px
 
 	&-in
+		background-color: #fff
 		width: 100%
 		padding: 20px 10px
 
@@ -30,6 +30,9 @@
 			overflow: hidden
 			&.view-grey
 				background-color: $c-text-light
+			&.view-blue
+				flex-direction: column
+				background-color: $c-main
 
 			&-img
 				+sizes(100%, 100%)
@@ -43,6 +46,21 @@
 				color: #fff
 				&.view-smaller
 					font-size: 70px
+
+			&-title
+				color: #fff
+				margin: 10px 0 5px
+
+			&-numbers
+				+flex(center, center)
+
+				&-p
+					font-size: 18px
+					color: #fff
+					margin: 0 5px
+					&.active-p
+						color: rgb(241,171,60)
+						transform: scale(1.5)
 
 	&-return
 		color: black
@@ -69,6 +87,7 @@
 
 	&-trio
 		width: 100%
+		background-color: #fff
 		&-links
 			+flex(flex-start, center)
 			&-item
