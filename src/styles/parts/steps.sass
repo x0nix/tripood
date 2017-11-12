@@ -79,7 +79,6 @@
         background-color: #4aa33f
         justify-self: flex-end
         color: #fff
-        opacity: .8
 
   &-current
     +flex(space-between, center)
@@ -115,5 +114,87 @@
     &-location
       height: auto
       font-size: 45px
+
+  &-process
+    background: white
+    padding: 5px
+
+  &-paths
+    +flex(flex-start, center)
+
+    &-path
+      +relative()
+      +size(50px)
+      +flex(center, center)
+      font-size: 22px
+      color: white
+      background-color: rgb(195,196,197)
+      margin: 15px 0 15px 5px
+
+      &::before
+        +absolute(50% null null 50%)
+        transform: translate(-50%, -50%)
+        +size(3px calc(100% + 30px))
+        content: ""
+        z-index: -1
+        background: inherit
+
+    &-text
+      margin: 0
+      padding-left: 15px
+      font-weight: bold
+      font-size: 18px
+
+  &-finishbox
+    background: white
+    padding: 5px 15px 15px
+    margin-top: 5px
+
+    &-title
+      margin: 0 0 10px
+      padding: 10px 0 15px
+      border-bottom: 2px dashed $c-text-light
+
+    &-text
+      font-size: 13px
+
+    &-buttons
+      +flex(space-between, center)
+      flex-wrap: wrap
+      +size(100% auto)
+
+      &-save,
+      &-next
+        +flex(center, center)
+        +size(100% 50px)
+        border-radius: 3px
+        font-size: 22px
+        color: #fff
+        margin-bottom: 5px
+
+      &-save
+        background: #4186ce
+
+        &::before
+          content: "\f0c7"
+          display: inline-block
+          font: normal normal normal 14px/1 FontAwesome
+          font-size: 20px
+          text-rendering: auto
+          margin-right: 10px
+
+      &-next
+        color: #fff
+        background: $c-main
+
+  +media(500)
+    &-finishbox
+      &-buttons
+        flex-wrap: nowrap
+
+        &-save,
+        &-next
+          +size(48% 50px)
+          margin: 0
 
 

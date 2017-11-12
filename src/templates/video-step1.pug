@@ -47,7 +47,90 @@ block sectionOuterContent
     .steps-add
         i(aria-hidden="true").fa.fa-plus.steps-add-plus
         i(aria-hidden="true").fa.fa-map-marker.steps-add-location
+    .steps-process
+        .option
+            .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-map-marker
 
-    
+                    h3.option-text Letiště Václava Havla, Prague
+
+                    .option-tools
+                        .option-tools-item.view-rewrite
+                            i(aria-hidden="true").fa.fa-pencil-square-o
+
+                .option-checkpoint
+                    .option-checkpoint-map
+                        img(src="https://picsum.photos/5000/?random").option-checkpoint-map-img
+
+    .steps-paths
+        .steps-paths-path
+            i(aria-hidden="true").fa.fa-bicycle
+        p.steps-paths-text Cesta kolem
+
+    .steps-process
+        .option
+            .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-map-marker
+
+                    .option-input
+                        input(type="text" name="text" placeholder="Zadejte místo na mapě").option-input-in
+
+                    .option-tools
+                        .option-tools-item.view-info
+                            i(aria-hidden="true").fa.fa-info-circle
+                        .option-tools-item.view-delete
+                            i(aria-hidden="true").fa.fa-trash
+
+                .option-checkpoint
+                    .option-checkpoint-map
+                        .option-checkpoint-map-loading
+                            +shape('loading')
+                        p.option-checkpoint-map-text Maps loading
+
+            .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-map-signs
+
+                    .option-paths-texts
+                        .option-paths-texts-text From: Letiště Václava Havla, Prague
+                        .option-paths-texts-text To: ...
+
+                .option-paths
+                    .option-paths-in
+                        .option-paths-item
+                            i(aria-hidden="true").fa.fa-bus
+                        .option-paths-item
+                            i(aria-hidden="true").fa.fa-car
+                        .option-paths-item
+                            i(aria-hidden="true").fa.fa-train
+                        .option-paths-item
+                            i(aria-hidden="true").fa.fa-subway
+                        .option-paths-item
+                            i(aria-hidden="true").fa.fa-taxi
+                        .option-paths-item
+                            i(aria-hidden="true").fa.fa-ship
+                        .option-paths-item
+                            i(aria-hidden="true").fa.fa-plane
+                        .option-paths-item.active
+                            i(aria-hidden="true").fa.fa-bicycle
+                        .option-paths-item
+                            i(aria-hidden="true").fa.fa-motorcycle
+                        .option-paths-item
+                            i(aria-hidden="true").fa.fa-map-signs
+
+    .steps-finishbox
+        h2.steps-finishbox-title Dokončení vytvoření videa
+        p.steps-finishbox-text Zájezd můžete pouze uložit a vrátí se tak, kdykoliv k jeho deplnění. Pokud jste se zájezdem spokojení a chcete jej publikovat, pro ostatní uživatele. Zadejte tlačítko publikovat. Váš zájezd bude následovně do 24 hodin zkontrolován a publikován.
+        .steps-finishbox-buttons
+            a(href="").steps-finishbox-buttons-save Uložit koncept
+            a(href="/video-step2.html").steps-finishbox-buttons-next Další
+
+
+
 
 

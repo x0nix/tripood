@@ -1,0 +1,23 @@
+extends layouts/section
+
+append vars
+    - var title = "Nastavení videa"
+    - var sectionTitle = "Nastavení videa"
+
+block sectionPicture
+    .section-heading-picture.view-blue
+        h2.section-heading-picture-title Step
+        .section-heading-picture-numbers
+            p.section-heading-picture-numbers-p 1
+            p.section-heading-picture-numbers-p.active-p 2
+            p.section-heading-picture-numbers-p 3
+
+block sectionContent
+
+block sectionOuterContent
+    .steps-finishbox
+        h2.steps-finishbox-title Dokončení vytvoření videa
+        p.steps-finishbox-text Zájezd můžete pouze uložit a vrátí se tak, kdykoliv k jeho deplnění. Pokud jste se zájezdem spokojení a chcete jej publikovat, pro ostatní uživatele. Zadejte tlačítko publikovat. Váš zájezd bude následovně do 24 hodin zkontrolován a publikován.
+        .steps-finishbox-buttons
+            a(href="").steps-finishbox-buttons-save Uložit koncept
+            a(href="/video-step3.html").steps-finishbox-buttons-next Další

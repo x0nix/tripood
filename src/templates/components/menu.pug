@@ -4,11 +4,37 @@ div.menu
 			div.menu-nav-bar
 			div.menu-nav-bar
 			div.menu-nav-bar
-		div.menu-nav-logo
-			img
+		a(href="/").menu-nav-logo
+			img(src="images/logo-tripood.png").menu-nav-logo-img
+
+	.menu-items
+		a(href="").menu-items-item Home
+		a(href="").menu-items-item O službě
+		a(href="").menu-items-item Holiday
+		a(href="").menu-items-item Registrace
+		a(href="").menu-items-item Support
+
 
 	div.menu-links
 		a(href="/profile.html").menu-links-item
 			i(aria-hidden="true").fa.fa-user-circle.menu-links-item-i
 		a(href="#").menu-links-item
 			i(aria-hidden="true").fa.fa-share-alt.menu-links-item-i
+
+.sidemenu
+	.sidemenu-items
+		a(href="").sidemenu-item Home
+		a(href="").sidemenu-item O službě
+		a(href="").sidemenu-item Registrace
+		a(href="").sidemenu-item Support
+
+script.
+	initComponents.push({
+		name: 'toggleClass',
+		data: {
+			toggleClass: 'active',
+			trigger: '.menu-nav-bars',
+			place: '.menu, .sidemenu'
+		}
+	})
+

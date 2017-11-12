@@ -23,12 +23,21 @@ $barHeight: 5px
 	&-nav
 		+flex(space-between, center)
 
+		&-logo
+			+flex(center, center)
+			+size(100%)
+
+			&-img
+				margin-left: 10px
+				max-height: 58px
+
 		&-bars
 			margin-left: 15px
 			position: relative
 			height: 25px
 			width: $barWidth
 			cursor: pointer
+			display: block
 
 		&-bar
 			+sizes($barWidth, $barHeight)
@@ -50,6 +59,16 @@ $barHeight: 5px
 				bottom: 0
 				transform-origin: 0 50%
 
+	&-items
+		flex-grow: 1
+		display: none
+		padding: 0 10px
+
+		&-item
+			color: #fff
+			margin: 0 15px
+			font-size: 15px
+
 	&-links
 		+flex(space-between, center)
 		margin-right: 15px
@@ -58,5 +77,18 @@ $barHeight: 5px
 			font-size: 23px
 			color: #fff
 			margin: 0 6px
+
+	+media(994)
+		&-nav
+			&-bars
+				display: none
+
+		&-items
+			+flex(flex-end, center)
+
+		&-links
+			&-item
+				font-size: 30px
+				margin: 0 15px
 
 

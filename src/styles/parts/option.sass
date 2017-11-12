@@ -1,0 +1,108 @@
+.option
+  +relative()
+
+  &-item
+    &:nth-child(1n + 2)
+      margin-top: 15px
+    &-in
+      +flex(flex-start, center)
+
+  &-icon
+    +flex(center, center)
+    +size(50px)
+    background: $c-main
+    color: #fff
+    font-size: 22px
+    cursor: pointer
+
+  &-input
+    flex-grow: 1
+
+    &-in
+      +size(100% 50px)
+      border: 2px solid #f1f1f1
+      padding: 0 100px 0 10px
+
+  &-text
+    margin: 0
+    padding-left: 15px
+    padding-right: 50px
+    color: $c-main
+
+  &-tools
+    +flex()
+    +absolute(0 0 null null)
+
+    &-item
+      +flex(center, center)
+      +size(50px)
+      font-size: 30px
+      cursor: pointer
+
+      &.view-info
+        background-color: #f1f1f1
+        color: black
+
+      &.view-delete
+        background-color: #dad9d8
+        color: red
+
+      &.view-rewrite
+        background-color: #4aa33f
+        color: white
+
+        i
+          margin-right: -5px
+
+  &-checkpoint
+    margin-top: 5px
+
+    &-map
+      +flex(center, center)
+      +size(100% 150px)
+      border: 2px solid #f1f1f1
+      overflow: hidden
+
+      &-img
+        +size(100% auto)
+
+      &-loading
+        color: inherit
+
+      &-text
+        margin: 0
+        padding-left: 15px
+        font-style: italic
+
+  &-paths
+    max-width: 350px
+    margin: -5px
+    margin-top: 10px
+
+    &-in
+      +flex(center)
+      flex-wrap: wrap
+
+    &-texts
+      padding-left: 15px
+      font-weight: bold
+      font-size: 14px
+
+    &-item
+      +flex(center, center)
+      +size(60px)
+      font-size: 30px
+      margin: 5px
+      border: 1px solid #f1f1f1
+      cursor: pointer
+
+      &.active
+        color: black
+        border: 3px solid $c-main
+
+  +media(500)
+    &-paths
+      max-width: 450px
+      &-item
+        +size(80px)
+
