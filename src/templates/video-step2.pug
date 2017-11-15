@@ -12,9 +12,46 @@ block sectionPicture
             p.section-heading-picture-numbers-p.active-p 2
             p.section-heading-picture-numbers-p 3
 
-block sectionContent
-
 block sectionOuterContent
+    .steps-video
+        video(controls).video-src
+            source(src="static/The_Rooster.mp4" type="video/mp4")
+
+    .steps-process
+        .steps-speed
+            h2.steps-title Rychlost slide videa
+            .steps-speed-wrap
+                .steps-speed-icon
+                    i(aria-hidden="true").fa.fa-wrench
+
+                .steps-speed-slider
+                    p.steps-speed-slider-handle.ui-slider-handle 50
+
+                .steps-speed-icon
+                    i(aria-hidden="true").fa.fa-wrench
+
+                script.
+                    initComponents.push({
+                        name: 'slider'
+                    })
+
+        .steps-music
+            h2.steps-title Nahrát hudbu
+
+            .steps-music-wrap
+                select.steps-music-select
+                    option.steps-music-option Vybrat hudbu
+                    option.steps-music-option Kájá got
+                    option.steps-music-option Kájá got
+                a(href="").steps-music-button Nahrát
+
+            .steps-music-item
+                .steps-music-item-icon
+                    i(aria-hidden="true").fa.fa-music
+
+                p.steps-music-item-text Hudba_název_song.mp3
+
+
     .steps-finishbox
         h2.steps-finishbox-title Dokončení vytvoření videa
         p.steps-finishbox-text Zájezd můžete pouze uložit a vrátí se tak, kdykoliv k jeho deplnění. Pokud jste se zájezdem spokojení a chcete jej publikovat, pro ostatní uživatele. Zadejte tlačítko publikovat. Váš zájezd bude následovně do 24 hodin zkontrolován a publikován.

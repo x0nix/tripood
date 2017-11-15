@@ -12,9 +12,34 @@ block sectionPicture
             p.section-heading-picture-numbers-p 2
             p.section-heading-picture-numbers-p.active-p 3
 
-block sectionContent
-
 block sectionOuterContent
+    .steps-video
+        video(controls).video-src
+            source(src="static/The_Rooster.mp4" type="video/mp4")
+
+    .steps-process
+        .steps-transparent
+            h2.steps-title Nastavení viditelnosti zájezdu
+
+            .steps-transparent-items
+                .steps-transparent-item
+                    input(type="radio" value="" name="transparent")
+                    .steps-transparent-item-icon
+                        i(aria-hidden="true").fa.fa-globe
+
+                    .steps-transparent-item-info
+                        h3.steps-transparent-item-info-title Veřejně dostupné
+                        p.steps-transparent-item-info-text Váš zájezd může vidět kdokoliv
+
+                .steps-transparent-item
+                    input(type="radio" value="" name="transparent")
+                    .steps-transparent-item-icon
+                        i(aria-hidden="true").fa.fa-user-secret
+
+                    .steps-transparent-item-info
+                        h3.steps-transparent-item-info-title Pouze uživatelé s odkazem
+                        p.steps-transparent-item-info-text Váš zájezd může vidět pouze uživatel s odkazem
+
     .steps-finishbox
         h2.steps-finishbox-title Dokončení vytvoření videa
         p.steps-finishbox-text Zájezd můžete pouze uložit a vrátí se tak, kdykoliv k jeho deplnění. Pokud jste se zájezdem spokojení a chcete jej publikovat, pro ostatní uživatele. Zadejte tlačítko publikovat. Váš zájezd bude následovně do 24 hodin zkontrolován a publikován.

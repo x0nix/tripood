@@ -64,10 +64,43 @@ block sectionOuterContent
                     .option-checkpoint-map
                         img(src="https://picsum.photos/5000/?random").option-checkpoint-map-img
 
+        .done
+            .done-item
+                .done-item-icon
+                    i(aria-hidden="true").fa.fa-comment
+                p.done-item-text Přiletěli jsme do Basilej, doporučuji se zde zdržet pár hodin, je to moc krásné město.
+
+            .done-item
+                .done-item-icon
+                    i(aria-hidden="true").fa.fa-tag
+                .done-item-tags
+                    p.done-item-tags-item Město
+                    p.done-item-tags-item Historie
+                    p.done-item-tags-item Prohlídky
+
+            .done-item
+                .done-item-icon
+                    i(aria-hidden="true").fa.fa-map-marker
+                a(href="").done-item-text Více informací o místě
+
+            .done-item
+                .done-item-icon
+                    i(aria-hidden="true").fa.fa-link
+                a(href="").done-item-text https://www.avis.cz
+
+            .done-item
+                .done-item-icon
+                    i(aria-hidden="true").fa.fa-money
+                p.done-item-text.view-strong 280$
+
     .steps-paths
         .steps-paths-path
             i(aria-hidden="true").fa.fa-bicycle
         p.steps-paths-text Cesta kolem
+
+        .steps-add.view-path
+            i(aria-hidden="true").fa.fa-plus.steps-add-plus
+            i(aria-hidden="true").fa.fa-map-marker.steps-add-location
 
     .steps-process
         .option
@@ -123,12 +156,151 @@ block sectionOuterContent
                         .option-paths-item
                             i(aria-hidden="true").fa.fa-map-signs
 
+            .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-link
+
+                    .option-input
+                        input(type="text" name="text" placeholder="Přidejte externí www adresu").option-input-in
+
+                    .option-tools
+                        .option-tools-item.view-info
+                            i(aria-hidden="true").fa.fa-info-circle
+                        .option-tools-item.view-delete
+                            i(aria-hidden="true").fa.fa-trash
+
+            .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-tag
+
+                    .option-input
+                        input(type="text" name="text" placeholder="Přidejte tagy").option-input-in
+
+                    .option-tools
+                        .option-tools-item.view-info
+                            i(aria-hidden="true").fa.fa-info-circle
+                        .option-tools-item.view-delete
+                            i(aria-hidden="true").fa.fa-trash
+
+            .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-star-half-o
+
+                    .option-stars
+                        fieldset.option-stars-fieldset
+                            input(type="radio" name="rating" id="star1").option-stars-input
+                            label(for="star1").option-stars-label
+                                i(aria-hidden="true").fa.fa-star
+                            input(type="radio" name="rating" id="star2").option-stars-input
+                            label(for="star2").option-stars-label
+                                i(aria-hidden="true").fa.fa-star
+                            input(type="radio" name="rating" id="star3").option-stars-input
+                            label(for="star3").option-stars-label
+                                i(aria-hidden="true").fa.fa-star
+                            input(type="radio" name="rating" id="star4").option-stars-input
+                            label(for="star4").option-stars-label
+                                i(aria-hidden="true").fa.fa-star
+                            input(type="radio" name="rating" id="star5").option-stars-input
+                            label(for="star5").option-stars-label
+                                i(aria-hidden="true").fa.fa-star
+
+                    .option-tools
+                        .option-tools-item.view-info
+                            i(aria-hidden="true").fa.fa-info-circle
+                        .option-tools-item.view-delete
+                            i(aria-hidden="true").fa.fa-trash
+
+            .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-money
+
+                    .option-money
+                        .option-money-wrap
+                            label(for="money1").option-money-label od
+                            input(type="number" name="number" id="money1").option-money-input
+                        .option-money-wrap
+                            label(for="money2").option-money-label do
+                            input(type="number" name="number" id="money2").option-money-input
+
+                .option-currency
+                    .option-currency-text Vyber měnu
+                    select.option-currency-select
+                        option(value="CZK - Česká koruna").option-currency CZK - Česká koruna
+                        option(value="EUR - Euro").option-currency EUR - Euro
+                        option(value="USD - Americký dolar").option-currency USD - Americký dolar
+                        option(value="GBP - Anglická libra").option-currency GBP - Anglická libra
+
+                .option-tools
+                    .option-tools-item.view-info
+                        i(aria-hidden="true").fa.fa-info-circle
+                    .option-tools-item.view-delete
+                        i(aria-hidden="true").fa.fa-trash
+
+            .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-plus
+
+                    .option-input
+                        textarea(type="text" name="text" placeholder="Výhody a plusy").option-input-in.view-area
+
+                    .option-tools
+                        .option-tools-item.view-info
+                            i(aria-hidden="true").fa.fa-info-circle
+                        .option-tools-item.view-delete
+                            i(aria-hidden="true").fa.fa-trash
+
+            .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-minus
+
+                    .option-input
+                        textarea(type="text" name="text" placeholder="Nevýhody a mínusy").option-input-in.view-area
+
+                    .option-tools
+                        .option-tools-item.view-info
+                            i(aria-hidden="true").fa.fa-info-circle
+                        .option-tools-item.view-delete
+                            i(aria-hidden="true").fa.fa-trash
+
+            .option-item
+                .option-add
+                    .option-add-wrap
+                        .option-add-icon
+                            i(aria-hidden="true").fa.fa-wrench
+                        .option-add-plus
+                            i(aria-hidden="true").fa.fa-plus
+                        select.option-add-select
+                            option(value="text" selected).option-add-option Přidejte další nástroje
+                            option(value="text").option-add-option Text
+                            option(value="text").option-add-option Foto
+                            option(value="text").option-add-option Www adresu
+                            option(value="text").option-add-option Tagy
+                            option(value="text").option-add-option Hodnocení
+                            option(value="text").option-add-option Cenu
+                            option(value="text").option-add-option Pro
+                            option(value="text").option-add-option Proti
+
     .steps-finishbox
         h2.steps-finishbox-title Dokončení vytvoření videa
         p.steps-finishbox-text Zájezd můžete pouze uložit a vrátí se tak, kdykoliv k jeho deplnění. Pokud jste se zájezdem spokojení a chcete jej publikovat, pro ostatní uživatele. Zadejte tlačítko publikovat. Váš zájezd bude následovně do 24 hodin zkontrolován a publikován.
         .steps-finishbox-buttons
             a(href="").steps-finishbox-buttons-save Uložit koncept
             a(href="/video-step2.html").steps-finishbox-buttons-next Další
+
+    a(href="").steps-next
+        .steps-next-icon
+            i(aria-hidden="true").fa.fa-calendar-o
+        .steps-next-info
+            .steps-next-info-text Next day
+            .steps-next-info-icon
+                i(aria-hidden="true").fa.fa-arrow-right
+
 
 
 

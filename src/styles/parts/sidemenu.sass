@@ -12,6 +12,10 @@
 
   &.active
     transform: none
+  &.active + &
+    &-overlay
+      opacity: 1
+      pointer-events: all
 
   &-items
     margin-top: 150px
@@ -19,10 +23,20 @@
   &-item
     display: block
     color: #fff
-    font-size: 30px
+    font-size: 25px
     text-transform: uppercase
     transition: 300ms
+    margin-bottom: 5px
 
     &:hover
       opacity: 0.7
+
+  &-overlay
+    +absolute(0 null null 0)
+    +size(100%)
+    z-index: 999
+    background-color: rgba(#000, .7)
+    pointer-events: none
+    opacity: 0
+    transition: 300ms
 

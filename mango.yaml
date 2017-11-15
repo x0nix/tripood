@@ -18,6 +18,7 @@ static:
   - node_modules/lt-ie-9/lt-ie-9.min.js
   - node_modules/jquery/dist/jquery.min.js
   - src/data/manifest.json
+  - src/static/**
 templates:
   - src/templates/*.pug
 buildstamp:

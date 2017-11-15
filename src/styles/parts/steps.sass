@@ -1,4 +1,16 @@
 .steps
+
+  &-title
+    color: $c-main
+    margin: 0
+    padding: 10px 0 0 10px
+    font-size: 18px
+    font-weight: 400
+
+  &-video
+    video
+      display: block
+
   &-inputs
     padding-top: 10px
 
@@ -108,6 +120,17 @@
     margin: 15px auto
     cursor: pointer
 
+    &.view-path
+      +size(50px)
+      font-size: 15px
+      margin: 0
+      margin-left: auto
+      margin-right: 15px
+
+    &.view-path &
+      &-location
+        font-size: 26px
+
     &-plus
       opacity: .7
 
@@ -186,6 +209,120 @@
       &-next
         color: #fff
         background: $c-main
+
+  &-next
+    +flex(flex-start, center)
+    +size(100% 60px)
+    background: $c-main
+    margin-top: 5px
+    color: white
+    font-size: 27px
+    padding: 5px 10px
+
+    &:hover &
+      &-info
+        &-icon
+          transform: translateX(10px)
+
+    &-info
+      margin: 0 auto
+      +flex(center, center)
+
+      &-text
+        margin: 0
+        margin-right: 20px
+        font-size: 23px
+
+      &-icon
+        transition: 200ms
+
+  &-speed
+    border-bottom: 1px solid #f1f1f1
+    padding-bottom: 20px
+
+    &-wrap
+      +flex(center, center)
+      margin-top: 20px
+
+    &-slider
+      +relative()
+      +size(60% 7px)
+      border-radius: 3px
+      background: #4186ce
+      margin: 0 40px
+
+      &-handle
+        +flex(center, center)
+        +size(60px 30px)
+        +absolute(50% null null null)
+        transform: translate(-50%, -50%)
+        background: $c-main
+        border-radius: 15px
+        color: white
+        outline: none
+
+    &-icon
+      font-size: 30px
+
+  &-music
+    padding-top: 5px
+
+    &-wrap
+      +flex(flex-start, center)
+      margin-top: 15px
+      margin-left: 10px
+
+    &-select
+      +size(50% 50px)
+      background: none
+      border: 1px solid #f1f1f1
+      font-size: 15px
+
+    &-button
+      +size(auto 50px)
+      +flex(center, center)
+      color: white
+      background: $c-main
+      padding: 0 45px
+      margin-left: 10px
+      border-radius: 3px
+
+    &-item
+      +flex(flex-start, center)
+      margin-top: 5px
+      margin-left: 10px
+      font-size: 40px
+
+      &-text
+        margin: 0
+        margin-left: 20px
+        font-size: 15px
+
+  &-transparent
+    margin-bottom: 10px
+
+    &-item
+      +flex(flex-start, center)
+      margin: 20px 0 0 10px
+
+      &-icon
+        +flex(center, center)
+        +size(50px)
+        border-radius: 50%
+        background: #f1f1f1
+        margin: 0 15px
+        font-size: 25px
+        color: black
+
+      &-info
+        &-title
+          margin: 0
+          padding-bottom: 5px
+          font-size: 17px
+
+        &-text
+          margin: 0
+          font-size: 14px
 
   +media(500)
     &-finishbox

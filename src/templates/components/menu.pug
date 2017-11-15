@@ -27,13 +27,14 @@ div.menu
 		a(href="").sidemenu-item O službě
 		a(href="").sidemenu-item Registrace
 		a(href="").sidemenu-item Support
+.sidemenu-overlay
 
 script.
 	initComponents.push({
 		name: 'toggleClass',
 		data: {
 			toggleClass: 'active',
-			trigger: '.menu-nav-bars',
+			trigger: '.menu-nav-bars, .sidemenu-overlay',
 			place: '.menu, .sidemenu'
 		}
 	})
