@@ -269,22 +269,66 @@ block sectionOuterContent
                             i(aria-hidden="true").fa.fa-trash
 
             .option-item
+                .option-item-in
+                    .option-icon
+                        i(aria-hidden="true").fa.fa-minus
+
+                    .option-input
+                        input(type="text" name="text" placeholder="Fotogalerie" disabled).option-input-in
+
+                    .option-tools
+                        .option-tools-item.view-info.imagesHide
+                            i(aria-hidden="true").fa.fa-angle-down
+                        .option-tools-item.view-info
+                            i(aria-hidden="true").fa.fa-info-circle
+                        .option-tools-item.view-delete
+                            i(aria-hidden="true").fa.fa-trash
+
+                .option-images
+                    each item in [1, 2, 3, 4, 5, 6]
+                        .option-images-item
+                            .option-images-item-image
+                                img(src="images/1.jpeg").option-images-item-image-img
+                            .option-images-item-delete
+                                i(aria-hidden="true").fa.fa-trash
+
+                    script.
+                        initComponents.push({
+                            name: 'toggleClass',
+                            data: {
+                                toggleClass: 'active',
+                                trigger: '.imagesHide',
+                                place: '.option-images, .imagesHide'
+                            }
+                        })
+
+                .option-upload
+                    input(type="text" name="text" placeholder="Vybrat fotografii" disabled).option-upload-input
+                    .option-upload-btn.steps-finishbox-buttons-next Nahrát
+
+            .option-item
                 .option-add
                     .option-add-wrap
                         .option-add-icon
                             i(aria-hidden="true").fa.fa-wrench
                         .option-add-plus
                             i(aria-hidden="true").fa.fa-plus
-                        select.option-add-select
-                            option(value="text" selected).option-add-option Přidejte další nástroje
-                            option(value="text").option-add-option Text
-                            option(value="text").option-add-option Foto
-                            option(value="text").option-add-option Www adresu
-                            option(value="text").option-add-option Tagy
-                            option(value="text").option-add-option Hodnocení
-                            option(value="text").option-add-option Cenu
-                            option(value="text").option-add-option Pro
-                            option(value="text").option-add-option Proti
+                        select(data-width="100%").option-add-select
+                            option(selected) Přidejte další nástroje
+                            option(data-icon="glyphicon-comment") Text
+                            option(data-icon="glyphicon-camera") Foto
+                            option(data-icon="glyphicon-link") Www adresu
+                            option(data-icon="glyphicon-tags") Tagy
+                            option(data-icon="glyphicon-star") Hodnocení
+                            option(data-icon="glyphicon-piggy-bank") Cenu
+                            option(data-icon="glyphicon-plus") Pro
+                            option(data-icon="glyphicon-minus") Proti
+
+                        script.
+                            initComponents.push({
+                                name: 'select',
+                                place: '.option-add-select'
+                            })
 
     .steps-finishbox
         h2.steps-finishbox-title Dokončení vytvoření videa

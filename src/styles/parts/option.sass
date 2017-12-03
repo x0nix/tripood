@@ -29,6 +29,7 @@
 
   &-text
     margin: 0
+    font-size: 18px
     padding-left: 15px
     padding-right: 50px
     color: $c-main
@@ -187,11 +188,71 @@
       +relative()
       z-index: 2
       background: none
+
+      &.btn-group.bootstrap-select.option-add-select
+        height: 100%
+
+      span.filter-option.pull-left
+        line-height: 33px
+
+  &-images
+    &.active &
+      &-item:nth-child(n + 2)
+        display: none
+
+    &-item
+      +size(100%)
+      +flex(flex-start, center)
       border: 1px solid #f1f1f1
+      height: 200px
+
+      &-image
+        +relative()
+        +size(80% 100%)
+        overflow: hidden
+
+        &-img
+          +absolute(50% null null 0)
+          transform: translateY(-50%)
+          max-width: none
+          max-height: 100%
+
+      &-delete
+        +flex(center, center)
+        +size(80px)
+        background: #dad9d8
+        color: red
+        border-radius: 50%
+        font-size: 40px
+        cursor: pointer
+
+  &-upload
+    +flex(center, center)
+    +size(100%)
+    padding: 30px 10px
+    border: 1px solid #f1f1f1
+
+    &-input
+      +size(100% 50px)
+      flex-grow: 1
+      border: 1px solid #f1f1f1
+      padding-left: 15px
+
+    &-btn
+      padding: 5px 35px
+      width: auto !important
+      margin: 0 !important
 
   +media(500)
     &-paths
       max-width: 450px
       &-item
         +size(80px)
+
+.imagesHide.active
+  .fa-angle-down
+    transform: rotate(180deg)
+
+.fa-angle-down
+  transition: 300ms
 

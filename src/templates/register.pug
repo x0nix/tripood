@@ -1,0 +1,31 @@
+extends layouts/section
+
+append vars
+    - var title = "Registration"
+    - var sectionTitle = "Registration"
+
+block sectionPicture
+    .section-heading-picture.view-grey
+        i(aria-hidden="true").fa.fa-user-circle.menu-links-item-i.section-heading-picture-font
+
+block sectionContent
+    .login
+        form.login-form
+            .login-form-wrap
+                label(for="username").login-form-label= "Login"
+                .login-form-input.view-username
+                    input(type="text", name="username", id="username").login-form-input-in
+            .login-form-wrap
+                label(for="password").login-form-label= "Email"
+                .login-form-input.view-envelope
+                    input(type="text", name="password", id="password").login-form-input-in
+            .login-form-wrap
+                label(for="password").login-form-label= "Password"
+                .login-form-input.view-password
+                    input(type="password", name="password", id="password").login-form-input-in
+            .login-form-wrap
+                label(for="password").login-form-label= "Control password"
+                .login-form-input.view-password
+                    input(type="password", name="password", id="password").login-form-input-in
+
+        a(href="/video-step2.html").steps-finishbox-buttons-next.login-btn-center Create account

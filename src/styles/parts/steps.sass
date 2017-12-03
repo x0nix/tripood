@@ -64,6 +64,9 @@
         text-align: center
         color: $c-text
 
+        &:hover
+          color: inherit
+
         &::before
           content: ''
           +absolute(calc(100% - 10px) null null 50%)
@@ -177,6 +180,7 @@
       margin: 0 0 10px
       padding: 10px 0 15px
       border-bottom: 2px dashed $c-text-light
+      font-size: 24px
 
     &-text
       font-size: 13px

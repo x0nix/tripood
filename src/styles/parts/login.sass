@@ -1,7 +1,15 @@
 .login
 	margin-top: 90px
 
+	&-text
+		text-align: center
+		padding: 0 20px
+		margin-bottom: 40px
+
 	&-btn
+		&-center
+			margin: 0 auto !important
+
 		&-method
 			+sizes(100%, 50px)
 			+flex(space-between, center)
@@ -19,6 +27,7 @@
 				flex-grow: 1
 				text-align: center
 				margin: 0
+
 
 			&.view
 				&-facebook
@@ -60,16 +69,30 @@
 				padding-left: 32px
 
 			&.view-username::before
-					content: '\f007'
+				content: '\f007'
 			&.view-password::before
-					content: '\f13e'
+				content: '\f13e'
+			&.view-envelope::before
+				content: "\f003"
 
 		&-backup
 			+flex(space-between, center)
 			margin: 25px 0
 
+		&-link
+			&:hover
+				color: #337ab7
+
 		&-buttons
-			+flex(space-between, center, column-reverse)
+			+relative()
+			+flex(space-between, center, column)
+
+			&::before
+				content: ""
+				+size(100% 1px)
+				background: $c-text
+				+absolute(50% null null null)
+				transform: translateY(-50%)
 
 			&-submit,
 			&-new
@@ -88,6 +111,14 @@
 					background-color: #fff
 					color: $btnColor
 
+				&-text
+					+relative()
+					z-index: 10
+					margin: 15px 0
+					padding: 5px 15px
+					background: #fff
+					font-size: 17px
+
 			&-submit
 				border: 2px solid $c-main
 				background-color: $c-main
@@ -98,15 +129,6 @@
 				&:hover
 					background-color: #fff
 					color: $c-main
-
-			+media(480)
-				+flex(space-between, center, row)
-
-				&-submit,
-				&-new
-					+sizes(48%, 45px)
-					max-width: 250px
-					margin: 0
 
 
 

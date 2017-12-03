@@ -1,0 +1,14 @@
+extends layouts/section
+
+append vars
+    - var title = "Login - Sent"
+    - var sectionTitle = "Login"
+
+block sectionPicture
+    .section-heading-picture.view-grey
+        i(aria-hidden="true").fa.fa-user-circle.menu-links-item-i.section-heading-picture-font
+
+block sectionContent
+    .login
+        p.login-text Nyní prosíme navštivte svůj email a potvrďte registraci svého účtu
+        a(href="/video-step2.html").steps-finishbox-buttons-next.login-btn-center Continue
