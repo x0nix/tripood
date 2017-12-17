@@ -74,14 +74,58 @@ $barHeight: 5px
 		margin-right: 15px
 
 		&-item
+			+relative
 			font-size: 23px
 			color: #fff
 			margin: 0 6px
+
+			&-link
+				+absolute(0 null null 0)
+				+size(100%)
+				display: block
+
+			&-profile
+				+absolute(calc(100% + 6px) 50% null null)
+				transform: translateX(50%)
+				+size(380px auto)
+				color: #000
+				background: #fff
+				border: 1px solid lightgrey
+				opacity: 0
+				visibility: hidden
+				transition: opacity 300ms
+
+				&::before
+					content: ""
+					+absolute(-10px null null 50%)
+					transform: translate(-50%) rotate(45deg)
+					background: #fff
+					+size(18px)
+					z-index: -1
+					border-left: 1px solid lightgrey
+					border-top: 1px solid lightgrey
+
+				&-wrap
+					padding: 10px
+					border-bottom: 1px solid lightgrey
+
+					&:hover
+						background: #fbfbfb
+
+					&:last-child
+						border-bottom: none
+
+					h2,
+					p
+						color: #000
+
 
 			&:hover
 				color: white
 
 	+media(994)
+		padding: 0px 100px
+
 		&-nav
 			&-bars
 				display: none
@@ -93,5 +137,10 @@ $barHeight: 5px
 			&-item
 				font-size: 30px
 				margin: 0 15px
+
+				&.menu-item-profile
+					&:hover .menu-links-item-profile
+						opacity: 1
+						visibility: visible
 
 

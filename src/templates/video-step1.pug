@@ -44,6 +44,15 @@ block sectionOuterContent
 
         p.steps-current-start Start
 
+    .steps-current
+        .steps-current-wrapper
+            .steps-current-icon
+                i(aria-hidden="true").fa.fa-calendar-o
+            p.steps-current-title Day 2
+
+        a(href="#").steps-current-delete
+            i(aria-hidden="true").fa.fa-minus
+
     .steps-add
         i(aria-hidden="true").fa.fa-plus.steps-add-plus
         i(aria-hidden="true").fa.fa-map-marker.steps-add-location
@@ -65,6 +74,18 @@ block sectionOuterContent
                         img(src="https://picsum.photos/5000/?random").option-checkpoint-map-img
 
         .done
+            .done-item
+                .done-item-gallery
+                    a(href="/picture-detail.html").done-item-gallery-item.view-half
+                        img(src="https://picsum.photos/5000/?random").done-item-gallery-item-img
+                    .done-item-gallery-item.view-half
+                        a(href="/picture-detail.html").done-item-gallery-item.view-full
+                            img(src="https://picsum.photos/502/?random").done-item-gallery-item-img
+                        a(href="/picture-detail.html").done-item-gallery-item.view-full
+                            img(src="https://picsum.photos/501/?random").done-item-gallery-item-img
+                            .done-item-gallery-item-more
+                                p +24
+
             .done-item
                 .done-item-icon
                     i(aria-hidden="true").fa.fa-comment

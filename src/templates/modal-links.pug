@@ -1,0 +1,63 @@
+extends layouts/section
+
+append vars
+    - var title = "Login"
+    - var sectionTitle = "Login"
+
+block sectionPicture
+    .section-heading-picture.view-grey
+        i(aria-hidden="true").fa.fa-user-circle.menu-links-item-i.section-heading-picture-font
+
+block sectionContent
+    div.login
+        a(href= "#").login-btn-method.view-facebook
+            div.login-btn-method-icon
+                i(aria-hidden="true").fa.fa-facebook
+            p.login-btn-method-text= "Přihlásit se pomocí Facebooku"
+
+        a(href= "#").login-btn-method.view-gmail
+            div.login-btn-method-icon
+                i(aria-hidden="true").fa.fa-google
+            p.login-btn-method-text= "Přihlásit se pomocí Gmailu"
+
+        a(href= "/login-email.html").login-btn-method.view-email
+            div.login-btn-method-icon
+                i(aria-hidden="true").fa.fa-envelope
+            p.login-btn-method-text= "Přihlásit se pomocí Emailu"
+
+    .modality.active-modality
+        .modality-inner
+            .modality-inner-in
+                h2.modality-title Sdílet link
+
+                .modality-btn.movieholiday-btn
+                    .btnCore.movieholiday-edit-btn OK
+
+                .modality-links
+                    a(href="#").modality-links-icon.view-facebook
+                        i(aria-hidden="true").fa.fa-facebook
+                    a(href="#").modality-links-icon.view-gmail
+                        i(aria-hidden="true").fa.fa-google
+                    a(href="#").modality-links-icon.view-twitter
+                        i(aria-hidden="true").fa.fa-twitter
+                    a(href="#").modality-links-icon.view-vk
+                        i(aria-hidden="true").fa.fa-vk
+                    a(href="#").modality-links-icon.view-linkedin
+                        i(aria-hidden="true").fa.fa-linkedin
+                    a(href="#").modality-links-icon.view-email
+                        i(aria-hidden="true").fa.fa-envelope
+
+                input(type="text" name="link" value="https://youtube.com").modality-input
+
+
+        .modality-overlay
+
+            script.
+                initComponents.push({
+                    name: 'toggleClass',
+                    data: {
+                        toggleClass: 'active-modality',
+                        trigger: '.modality-btn, .modality-overlay',
+                        place: '.modality'
+                    }
+                })

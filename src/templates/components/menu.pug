@@ -16,8 +16,46 @@ div.menu
 
 
 	div.menu-links
-		a(href="/profile.html").menu-links-item
+		.menu-links-item.menu-item-profile
+			a(href="/profile.html").menu-links-item-link
 			i(aria-hidden="true").fa.fa-user-circle.menu-links-item-i
+
+			.menu-links-item-profile
+				a(href="#").profile-option-wrap.menu-links-item-profile-wrap
+					.profile-option-img.view-movie
+						i(aria-hidden="true").fa.fa-video-camera
+					.profile-option-info
+						h2.profile-option-info-title Movie Holiday
+						p.profile-option-info-text Přehled a nastavení holiday videí
+
+				a(href="#").profile-option-wrap.menu-links-item-profile-wrap
+					.profile-option-img.view-friends
+						i(aria-hidden="true").fa.fa-users
+					.profile-option-info
+						h2.profile-option-info-title Friends
+						p.profile-option-info-text Přehled a nastavení přátel
+
+				a(href="#").profile-option-wrap.menu-links-item-profile-wrap
+					.profile-option-img.view-favorite
+						i(aria-hidden="true").fa.fa-heart
+					.profile-option-info
+						h2.profile-option-info-title Oblíbené videa
+						p.profile-option-info-text Videa, které máte v oblíbených
+
+				a(href="#").profile-option-wrap.menu-links-item-profile-wrap
+					.profile-option-img.view-reactions
+						i(aria-hidden="true").fa.fa-comment
+					.profile-option-info
+						h2.profile-option-info-title Zprávy a reakce
+						p.profile-option-info-text Zprávy videa ostatních lidí
+
+				a(href="#").profile-option-wrap.menu-links-item-profile-wrap
+					.profile-option-img.view-logout
+						i(aria-hidden="true").fa.fa-power-off
+					.profile-option-info
+						h2.profile-option-info-title Logout
+						p.profile-option-info-text Odhlásit se z tohoto zařízení
+
 		a(href="#").menu-links-item
 			i(aria-hidden="true").fa.fa-share-alt.menu-links-item-i
 
@@ -27,6 +65,38 @@ div.menu
 		a(href="").sidemenu-item O službě
 		a(href="").sidemenu-item Registrace
 		a(href="").sidemenu-item Support
+
+	.sidemenu-links
+		a(href="#").sidemenu-links-item
+			.sidemenu-links-item-icon.view-movie
+				i(aria-hidden="true").fa.fa-video-camera
+
+			.sidemenu-links-item-text Movie Holiday
+
+		a(href="#").sidemenu-links-item
+			.sidemenu-links-item-icon.view-friends
+				i(aria-hidden="true").fa.fa-users
+
+			.sidemenu-links-item-text Friends
+
+		a(href="#").sidemenu-links-item
+			.sidemenu-links-item-icon.view-favorite
+				i(aria-hidden="true").fa.fa-heart
+
+			.sidemenu-links-item-text Oblíbené videa
+
+		a(href="#").sidemenu-links-item
+			.sidemenu-links-item-icon.view-reactions
+				i(aria-hidden="true").fa.fa-comment
+
+			.sidemenu-links-item-text Zprávy a reakce
+
+		a(href="#").sidemenu-links-item
+			.sidemenu-links-item-icon.view-logout
+				i(aria-hidden="true").fa.fa-power-off
+
+			.sidemenu-links-item-text Logout
+
 .sidemenu-overlay
 
 script.

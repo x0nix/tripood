@@ -1,9 +1,7 @@
 .sidemenu
   +fixed(0)
   +size(50% 100%)
-  +flex()
-  padding-left: 30px
-  background: $c-main
+  background: #1a3550
   transition: 400ms
   overflow-y: auto
   transform: translateX(-100%)
@@ -18,19 +16,52 @@
       pointer-events: all
 
   &-items
-    margin-top: 150px
+    background: #1f4369
+    padding: 90px 0 30px 30px
+    border-bottom: 10px solid rgba(#fff, .2)
 
   &-item
     display: block
     color: #fff
     font-size: 25px
-    text-transform: uppercase
     transition: 300ms
-    margin-bottom: 5px
+    margin: 15px 0
+    font-weight: bold
 
     &:hover
       color: white
       opacity: 0.7
+
+  &-links
+    border-bottom: 1px solid #000
+
+    &-item
+      +size(100% auto)
+      +flex(flex-start, center)
+      color: #fff
+      padding: 15px 30px
+      transition: 300ms
+      border-top: 1px solid #000
+      border-bottom: 1px solid rgba(#fff, .3)
+
+      &:hover
+        background: rgba(#fff, .1)
+
+      &:first-child
+        border-top: none
+
+      &-icon
+        +sizes(50px, 50px)
+        min-width: 50px
+        +flex(center, center)
+        border-radius: 50%
+        font-size: 20px
+        color: white
+        margin-right: 15px
+        border: 2px solid #fff
+
+      &-text
+        font-size: 18px
 
   &-overlay
     +absolute(0 null null 0)

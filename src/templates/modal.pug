@@ -1,0 +1,48 @@
+extends layouts/section
+
+append vars
+    - var title = "Login"
+    - var sectionTitle = "Login"
+
+block sectionPicture
+    .section-heading-picture.view-grey
+        i(aria-hidden="true").fa.fa-user-circle.menu-links-item-i.section-heading-picture-font
+
+block sectionContent
+    div.login
+        a(href= "#").login-btn-method.view-facebook
+            div.login-btn-method-icon
+                i(aria-hidden="true").fa.fa-facebook
+            p.login-btn-method-text= "Přihlásit se pomocí Facebooku"
+
+        a(href= "#").login-btn-method.view-gmail
+            div.login-btn-method-icon
+                i(aria-hidden="true").fa.fa-google
+            p.login-btn-method-text= "Přihlásit se pomocí Gmailu"
+
+        a(href= "/login-email.html").login-btn-method.view-email
+            div.login-btn-method-icon
+                i(aria-hidden="true").fa.fa-envelope
+            p.login-btn-method-text= "Přihlásit se pomocí Emailu"
+
+    .modality.active-modality
+        .modality-inner
+            .modality-inner-in
+                h2.modality-title Něco je špatně tady může být nějaký nadpis hlášky
+
+                p.modality-content Zde může být popis problémové hlášky nebo také nějaká ikona
+
+                .modality-btn.movieholiday-btn
+                    .btnCore.movieholiday-edit-btn OK
+
+        .modality-overlay
+
+                script.
+                    initComponents.push({
+                        name: 'toggleClass',
+                        data: {
+                            toggleClass: 'active-modality',
+                            trigger: '.modality-btn, .modality-overlay',
+                            place: '.modality'
+                        }
+                    })

@@ -1,0 +1,56 @@
+extends layouts/default
+
+append vars
+    - var page = 'index'
+
+block content
+    .section
+        .picDetail
+            .picDetail-image
+                img(src="https://picsum.photos/500/300/?random").picDetail-image-img
+                a(href="#").picDetail-image-arrows-right
+                    i(aria-hidden="true").fa.fa-arrow-circle-right
+                a(href="#").picDetail-image-arrows-left
+                    i(aria-hidden="true").fa.fa-arrow-circle-left
+
+            .picDetail-options
+                .picDetail-options-person
+                    .picDetail-options-person-text John Simons
+
+                    .picDetail-options-person-image
+                        img(src="https://picsum.photos/500/?random").picDetail-options-person-image-img
+
+                .picDetail-options-links
+                    a(href="").picDetail-options-links-item
+                        .picDetail-options-links-item-icon
+                            i(aria-hidden="true").fa.fa-heart-o
+                        .picDetail-options-links-item-text Oblíbené
+
+                    a(href="").picDetail-options-links-item
+                        .picDetail-options-links-item-icon
+                            i(aria-hidden="true").fa.fa-share
+                        .picDetail-options-links-item-text Share
+
+            .picDetail-comment
+                input(type="text" name="comment" placeholder="Napiš komentář").picDetail-comment-input
+
+                .btnCore.picDetail-comment-btn Publikovat
+
+            .picDetail-reactions
+                .picDetail-reactions-item
+                    .picDetail-reactions-item-text Wou super zábavaa
+
+                    .picDetail-options-person
+                        .picDetail-options-person-text John Simons
+
+                        .picDetail-options-person-image
+                            img(src="https://picsum.photos/500/?random").picDetail-options-person-image-img
+
+                .picDetail-reactions-item
+                    .picDetail-reactions-item-text Wou super zábavaaaa sdnasdnalsdn lasd nasdnlaksd lasknd
+
+                    .picDetail-options-person
+                        .picDetail-options-person-text John Simons
+
+                        .picDetail-options-person-image
+                            img(src="https://picsum.photos/500/?random").picDetail-options-person-image-img

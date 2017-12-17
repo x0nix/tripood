@@ -1,0 +1,96 @@
+.picDetail
+  +size(100% auto)
+  background: #fff
+
+  &-image
+    +relative
+    overflow: hidden
+    max-height: 400px
+
+    &-img
+      max-width: none
+      min-width: 100%
+
+    &-arrows
+      &-right,
+      &-left
+        +absolute(50% 10px null null)
+        transform: translateY(-50%)
+        font-size: 50px
+        color: rgba(#fff, .9)
+
+      &-left
+        +absolute(50% auto null 10px)
+
+  &-options
+    +flex(space-between, center)
+    padding: 10px 20px
+
+    &-person
+      +flex(center, center)
+
+      &-text
+        font-size: 14px
+        font-weight: bold
+
+      &-image
+        +size(50px)
+        border-radius: 50%
+        border: 3px solid lightgrey
+        overflow: hidden
+        margin-left: 15px
+
+    &-links
+      +flex(center, center)
+
+      &-item
+        +flex(center, center)
+        color: grey
+        margin-left: 20px
+
+        &:hover
+          color: grey
+
+        &-icon
+          font-size: 30px
+          margin-right: 10px
+
+        &-text
+          font-size: 14px
+          display: none
+
+  &-comment
+    +flex()
+    border-top: 1px solid lightgrey
+    padding: 20px
+
+    &-input
+      font-size: 14px
+      border-radius: 3px
+      padding-left: 15px
+      border: 1px solid lightgrey
+      margin-right: 10px
+      +size(80% 45px)
+
+    &-btn
+      border-radius: 3px
+      background: grey
+      color: #fff
+
+  &-reactions
+    &-item
+      +flex(space-between, center)
+      padding: 20px
+      border-top: 1px solid lightgrey
+
+      &-text
+        line-height: 20px
+        max-width: 50%
+        font-weight: bold
+
+  +media(480)
+    &-options
+      &-links
+        &-item
+          &-text
+            display: block
