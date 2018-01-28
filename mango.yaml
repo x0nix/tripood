@@ -8,7 +8,7 @@ scripts:
   - src/scripts/index.es6
   #- src/serviceWorker.es6
 images:
-  - src/images/**/*.{jpg,png}
+  - src/images/**/*.{jpg,png,jpeg}
 sprites:
   -
     path: src/images/sources/*.svg
