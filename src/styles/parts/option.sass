@@ -160,10 +160,22 @@
       box-shadow: none
 
   &-add
+
+    &.active &
+      &-items-item
+        display: flex
+      &-arrow
+        transform: translateY(-50%) rotate(180deg)
+
     &-wrap
       +size(100% auto)
       +flex(flex-start, center)
       +relative()
+
+    &-title
+      font-size: 18px
+      margin-left: 10px
+      font-weight: bold
 
     &-icon
       +flex(center, center)
@@ -175,13 +187,42 @@
       i
         margin-top: -5px
 
-    &-plus
+    &-arrow
       +flex(center, center)
       +absolute(50% 25px null null)
       transform: translateY(-50%)
-      color: #4aa33f
+      color: grey
       font-size: 25px
       z-index: 1
+      transition: 200ms
+      cursor: pointer
+
+    &-items
+      +flex(space-between)
+      flex-wrap: wrap
+      margin-top: 10px
+
+      &-item
+        justify-content: space-around
+        align-items: center
+        display: none
+        +size(45% 45px)
+        background: lightgrey
+        border-radius: 4px
+        margin: 5px 0
+        cursor: pointer
+
+        &-icon
+          font-size: 25px
+          color: grey
+
+        &-plus
+          color: #4aa33f
+          font-size: 25px
+
+        &-text
+          font-weight: bold
+          margin: 0
 
     &-select
       +size(100% 50px)
@@ -196,52 +237,63 @@
         line-height: 33px
 
   &-images
-    &.active &
-      &-item:nth-child(n + 2)
-        display: none
+    +flex()
+    overflow-y: auto
+    margin-top: 10px
 
     &-item
       +size(100%)
-      +flex(flex-start, center)
+      +flex(flex-start, center, column)
       border: 1px solid #f1f1f1
-      height: 200px
+      height: 250px
+      padding: 5px
 
       &-image
         +relative()
-        +size(80% 100%)
+        +size(100% 50%)
         overflow: hidden
 
         &-img
           +absolute(50% null null 0)
           transform: translateY(-50%)
-          max-width: none
-          max-height: 100%
+          min-width: 100%
 
-      &-delete
-        +flex(center, center)
-        +size(80px)
-        background: #dad9d8
-        color: red
-        border-radius: 50%
-        font-size: 40px
-        cursor: pointer
+      &-textarea
+        +flex()
+        margin-top: 5px
+
+        &-icon
+          font-size: 20px
+          margin-right: 2px
+
+      &-button
+        background: #265688
+        color: #fff
+        border-radius: 3px
+        margin-top: 10px
+
+
+        &:hover
+          color: #fff
 
   &-upload
-    +flex(center, center)
-    +size(100%)
-    padding: 30px 10px
-    border: 1px solid #f1f1f1
+    +relative
+    +flex(center, center, column)
+    +size(80px 250px)
+    background: #4aa33f
+    color: #fff
+    padding: 0 15px
+    margin-left: 5px
+    cursor: pointer
 
     &-input
-      +size(100% 50px)
-      flex-grow: 1
-      border: 1px solid #f1f1f1
-      padding-left: 15px
+      +absolute(0 null null 0)
+      +size(100%)
 
-    &-btn
-      padding: 5px 35px
-      width: auto !important
-      margin: 0 !important
+    &-plus
+      font-size: 20px
+    &-camera
+      font-size: 30px
 
   +media(500)
     &-paths

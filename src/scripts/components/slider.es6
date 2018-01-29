@@ -14,14 +14,18 @@ module.exports = class Slider extends Component {
     constructor(el, data) {
         super(el, data)
 
+        const selector = $(data.writeData)
+
         const handle = $( ".steps-speed-slider-handle" );
         const $slide = $(".steps-speed-slider")
         $slide.slider({
             create: function() {
                 handle.text( $( this ).slider( "value" ) );
+                selector.text( $( this ).slider( "value" ))
             },
             slide: function( event, ui ) {
                 handle.text( ui.value );
+                selector.text(ui.value)
             }
         });
 

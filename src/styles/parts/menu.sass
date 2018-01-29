@@ -3,7 +3,7 @@ $barHeight: 5px
 
 .menu
 	+sticky(0px 0px)
-	+sizes(100%, 60px)
+	+sizes(100vw, 60px)
 
 	+flex(space-between, center)
 	background-color: $c-main
@@ -94,6 +94,7 @@ $barHeight: 5px
 				opacity: 0
 				visibility: hidden
 				transition: opacity 300ms
+				display: none
 
 				&::before
 					content: ""
@@ -137,6 +138,9 @@ $barHeight: 5px
 			&-item
 				font-size: 30px
 				margin: 0 15px
+
+				&-profile
+					display: block
 
 				&.menu-item-profile
 					&:hover .menu-links-item-profile

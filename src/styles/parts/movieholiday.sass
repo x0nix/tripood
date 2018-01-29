@@ -55,12 +55,30 @@
             font-size: 25px
             text-rendering: auto
             margin-right: 10px
+
+    &-buttons
+        +flex(space-between, center)
+        padding: 10px
+
     &-edit
-        padding: 15px
-        &-btn
-            background-color: #0072b9
-            border-radius: 3px
-            margin: 0px auto
-            color: #fff
+        width: 48%
+        background-color: #0072b9
+        border-radius: 3px
+        color: #fff
+        display: block
+        padding: 10px 0
+        text-align: center
+
+    &-share
+        +flex(center, center)
+        width: 48%
+        background-color: lightgrey
+        border-radius: 3px
+        color: #fff
+        padding: 10px 0
+
+        &-text
+            margin: 0
+            margin-left: 10px
 
 

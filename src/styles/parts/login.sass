@@ -78,12 +78,18 @@
 			+relative()
 			+flex(space-between, center, column)
 
-			&::before
-				content: ""
-				+size(100% 1px)
-				background: $c-text
-				+absolute(50% null null null)
-				transform: translateY(-50%)
+			&-wrap
+				width: 100%
+				+relative
+				text-align: center
+				padding: 15px 0
+
+				&::before
+					content: ""
+					+size(100% 1px)
+					background: $c-text
+					+absolute(50% null null 0)
+					transform: translateY(-50%)
 
 			&-submit,
 			&-new
@@ -105,10 +111,11 @@
 				&-text
 					+relative()
 					z-index: 10
-					margin: 15px 0
+					margin: 15px auto
 					padding: 5px 15px
 					background: #fff
 					font-size: 17px
+					display: inline
 
 			&-submit
 				border: 2px solid $c-main

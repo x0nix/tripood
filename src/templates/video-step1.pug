@@ -25,7 +25,7 @@ block sectionContent
 
 block sectionOuterContent
     .steps-days
-        h3.steps-days-title Dny zájezdů
+        h4.steps-days-title Dny zájezdů
         .steps-days-items
             .steps-days-items-wrapper
                 a(href="#").steps-days-items-item All
@@ -298,8 +298,6 @@ block sectionOuterContent
                         input(type="text" name="text" placeholder="Fotogalerie" disabled).option-input-in
 
                     .option-tools
-                        .option-tools-item.view-info.imagesHide
-                            i(aria-hidden="true").fa.fa-angle-down
                         .option-tools-item.view-info
                             i(aria-hidden="true").fa.fa-info-circle
                         .option-tools-item.view-delete
@@ -310,46 +308,54 @@ block sectionOuterContent
                         .option-images-item
                             .option-images-item-image
                                 img(src="images/1.jpeg").option-images-item-image-img
-                            .option-images-item-delete
-                                i(aria-hidden="true").fa.fa-trash
+                            .option-images-item-textarea
+                                i(aria-hidden="true").fa.fa-pencil-square-o.option-images-item-textarea-icon
+                                textarea().option-images-textarea-input Zadej krátký popisek bla a bla bla bla
+                            .btnCore.option-images-item-button Smazat
 
-                    script.
-                        initComponents.push({
-                            name: 'toggleClass',
-                            data: {
-                                toggleClass: 'active',
-                                trigger: '.imagesHide',
-                                place: '.option-images, .imagesHide'
-                            }
-                        })
-
-                .option-upload
-                    input(type="text" name="text" placeholder="Vybrat fotografii" disabled).option-upload-input
-                    .option-upload-btn.steps-finishbox-buttons-next Nahrát
+                    .option-upload
+                        i(aria-hidden="true").fa.fa-plus.option-upload-plus
+                        i(aria-hidden="true").fa.fa-camera.option-upload-camera
 
             .option-item
                 .option-add
                     .option-add-wrap
                         .option-add-icon
                             i(aria-hidden="true").fa.fa-wrench
-                        .option-add-plus
-                            i(aria-hidden="true").fa.fa-plus
-                        select(data-width="100%").option-add-select
-                            option(selected) Přidejte další nástroje
-                            option(data-icon="glyphicon-comment") Text
-                            option(data-icon="glyphicon-camera") Foto
-                            option(data-icon="glyphicon-link") Www adresu
-                            option(data-icon="glyphicon-tags") Tagy
-                            option(data-icon="glyphicon-star") Hodnocení
-                            option(data-icon="glyphicon-piggy-bank") Cenu
-                            option(data-icon="glyphicon-plus") Pro
-                            option(data-icon="glyphicon-minus") Proti
+                        .option-add-title Přidat další nástroje
+                        .option-add-arrow
+                            i(aria-hidden="true").fa.fa-arrow-up
 
-                        script.
-                            initComponents.push({
-                                name: 'select',
-                                place: '.option-add-select'
-                            })
+                    .option-add-items
+                        .option-add-items-item
+                            i(aria-hidden="true").fa.fa-file-text.option-add-items-item-icon
+                            p.option-add-items-item-text Přidat text
+                            i(aria-hidden="true").fa.fa-plus.option-add-items-item-plus
+
+                        .option-add-items-item
+                            i(aria-hidden="true").fa.fa-file-text.option-add-items-item-icon
+                            p.option-add-items-item-text Přidat text
+                            i(aria-hidden="true").fa.fa-plus.option-add-items-item-plus
+
+                        .option-add-items-item
+                            i(aria-hidden="true").fa.fa-file-text.option-add-items-item-icon
+                            p.option-add-items-item-text Přidat text
+                            i(aria-hidden="true").fa.fa-plus.option-add-items-item-plus
+
+                        .option-add-items-item
+                            i(aria-hidden="true").fa.fa-file-text.option-add-items-item-icon
+                            p.option-add-items-item-text Přidat text
+                            i(aria-hidden="true").fa.fa-plus.option-add-items-item-plus
+
+                script.
+                    initComponents.push({
+                        name: 'toggleClass',
+                        place: '.option-add',
+                        data: {
+                            trigger: '.option-add-arrow',
+                            toggleClass: 'active'
+                        }
+                    })
 
     .steps-finishbox
         h2.steps-finishbox-title Dokončení vytvoření videa

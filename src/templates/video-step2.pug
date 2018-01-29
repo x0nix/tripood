@@ -30,9 +30,14 @@ block sectionOuterContent
                 .steps-speed-icon
                     i(aria-hidden="true").fa.fa-wrench
 
+                p(id="slider-data" style="position: absolute; opacity: 0") 0
+
                 script.
                     initComponents.push({
-                        name: 'slider'
+                        name: 'slider',
+                        data: {
+                            writeData: '#slider-data' //ukládá data elementu s tímto selectorem
+                        }
                     })
 
         .steps-music
