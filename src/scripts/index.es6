@@ -7,8 +7,7 @@ const componentsHandler = require('./componentsHandler')
 const onJQueryAvailable = ($) => {
 	require('./plugins')
 	componentsHandler({
-        'select': require('./components/select'),
-        'slider': require('./components/slider'),
+    'slider': require('./components/slider'),
 		'toggleClass': require('./components/toggleClass'),
 		'example': require('./components/example'),
 		'shapes': require('./components/shapes'),
