@@ -16,19 +16,19 @@ module.exports = class Slider extends Component {
 
         const selector = $(data.writeData)
 
-        const handle = $( ".steps-speed-slider-handle" );
+        const handle = $(".steps-speed-slider-handle");
         const $slide = $(".steps-speed-slider")
         $slide.slider({
             create: function() {
-                handle.text( $( this ).slider( "value" ) );
-                selector.text( $( this ).slider( "value" ))
+                $(this).slider( "value", selector.val());
+                handle.text($( this ).slider("value"));
             },
-            slide: function( event, ui ) {
-                handle.text( ui.value );
-                selector.text(ui.value)
-            }
+            slide: function(event, ui) {
+                handle.text(ui.value);
+                selector.val(ui.value);
+            },
+            min: 1,
+            max: 100,
         });
-
     }
-
 }
