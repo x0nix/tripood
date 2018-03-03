@@ -5,23 +5,22 @@ const componentsHandler = require('./componentsHandler')
 
 
 const onJQueryAvailable = ($) => {
-	require('./plugins')
-	componentsHandler({
-        'select': require('./components/select'),
-        'slider': require('./components/slider'),
-		'toggleClass': require('./components/toggleClass'),
-		'example': require('./components/example'),
-		'shapes': require('./components/shapes'),
-	})
+  require('./plugins')
+  componentsHandler({
+    'slider': require('./components/slider'),
+    'toggleClass': require('./components/toggleClass'),
+    'example': require('./components/example'),
+    'shapes': require('./components/shapes'),
+  })
 }
 
 const onJQueryMissing = () => {
-	console.log('jQuery dependency is missing. This page might not work correctly. Please try again later.')
+  console.log('jQuery dependency is missing. This page might not work correctly. Please try again later.')
 }
 
 
 jQueryFallbackProvider(
-	'/node_modules/jquery/dist/jquery.min.js',
-	onJQueryAvailable,
-	onJQueryMissing
+  '/node_modules/jquery/dist/jquery.min.js',
+  onJQueryAvailable,
+  onJQueryMissing
 )
