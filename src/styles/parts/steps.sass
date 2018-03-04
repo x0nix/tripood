@@ -27,6 +27,7 @@
       border: 1px solid #f1f1f1
       padding-left: 15px
       margin-top: 5px
+      background-color: #f1f5f8
 
     &-dates
       +flex(space-between, center)
@@ -37,6 +38,7 @@
         border: 1px solid #f1f1f1
         padding-left: 15px
         margin: 0 5px
+        background-color: #f1f5f8
 
   &-days
     &-title
@@ -197,6 +199,10 @@
       +flex(space-between, center)
       flex-wrap: wrap
       +size(100% auto)
+
+      &.view-centered
+        +flex(center, center)
+        padding-top: 5px
 
       &-save,
       &-next

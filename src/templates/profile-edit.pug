@@ -1,0 +1,42 @@
+extends layouts/section
+
+append vars
+    - var title = "Profile"
+    - var sectionTitle = "Profile"
+
+block sectionPicture
+    .section-heading-picture
+        img(src="https://picsum.photos/200").fa.fa-user-circle.menu-links-item-i.section-heading-picture-img
+
+block sectionContent
+    .login
+        form.login-form
+            .login-form-wrap
+                label(for="username").login-form-label= "Username"
+                .login-form-input.view-username
+                    input(type="text", name="username", id="username").login-form-input-in
+
+            .login-form-wrap
+                label(for="text").login-form-label= "Text o mně"
+                .login-form-input.view-text
+                    textarea(name="text", id="text").login-form-input-in.view-textarea
+
+            .login-form-wrap
+                label(for="web").login-form-label= "Vlastní web"
+                .login-form-input.view-web
+                    input(type="url", name="web", id="web").login-form-input-in
+
+block sectionOuterContent
+    .profile-photo
+        .profile-photo-title Profilová fotografie
+        .profile-photo-box
+            .profile-photo-box-photo
+                i(aria-hidden="true").fa.fa-user
+            .profile-photo-box-save
+                label(for="photo").profile-photo-box-save-label Nahrát
+                input(type="file" name="photo" id="photo").profile-photo-box-save-input
+
+    .steps-finishbox
+        h2.steps-finishbox-title Uložit nastavení profilu
+        .steps-finishbox-buttons.view-centered
+            a(href="/video-step2.html").steps-finishbox-buttons-next Uložit

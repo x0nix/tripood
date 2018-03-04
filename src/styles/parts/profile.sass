@@ -67,6 +67,58 @@
       transform: translateX(-10px)
       transition: 300ms
 
+  &-photo
+    background: #fff
+
+    &-title
+      max-width: 520px
+      padding: 0 10px
+      width: 100%
+      margin: 0 auto
+      text-align: left
+      font-weight: 700
+      font-size: 16px
+      color: #585858
+
+    &-box
+      +flex(space-evenly, center)
+      border-top: 1px solid #bbbbbb
+      margin-top: 10px
+      padding: 20px 0
+
+      &-photo
+        +size(80px)
+        +flex(center, center)
+        border-radius: 50%
+        font-size: 50px
+        border: 2px solid lightgrey
+        color: lightgrey
+
+        &.view-default
+          &::before
+            content: ""
+
+        img
+          +size(100%)
+
+      &-save
+        &-label
+          padding: 10px 0
+          width: 250px
+          text-align: center
+          font-weight: 700
+          font-size: 18px
+          color: #fff
+          background-color: #646566
+
+        &-input
+          opacity: 0.1
+          visibility: hidden
+          +absolute(0)
+          z-index: -1
+          pointer-events: none
+
+
   +media(500)
     &-option
       &-next
