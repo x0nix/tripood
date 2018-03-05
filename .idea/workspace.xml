@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30371b75-a316-467a-af41-fc65a4122923" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/templates/profile-edit.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/parts/login.sass" afterPath="$PROJECT_DIR$/src/styles/parts/login.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/parts/option.sass" afterPath="$PROJECT_DIR$/src/styles/parts/option.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/parts/profile.sass" afterPath="$PROJECT_DIR$/src/styles/parts/profile.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/parts/steps.sass" afterPath="$PROJECT_DIR$/src/styles/parts/steps.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/profile.pug" afterPath="$PROJECT_DIR$/src/templates/profile.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/video-step2.pug" afterPath="$PROJECT_DIR$/src/templates/video-step2.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/video-step1.pug" afterPath="$PROJECT_DIR$/src/templates/video-step1.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +21,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="video-step2.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="video-step2.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/templates/video-step2.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="735">
               <caret line="49" column="48" lean-forward="false" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="steps.sass" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/parts/steps.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video-step1.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/templates/video-step1.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="559">
+              <caret line="354" column="54" lean-forward="false" selection-start-line="354" selection-start-column="54" selection-end-line="354" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="option.sass" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/styles/parts/option.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="164" column="29" lean-forward="false" selection-start-line="164" selection-start-column="29" selection-end-line="164" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -46,6 +71,8 @@
       <find>add</find>
       <find>fini</find>
       <find>paths</find>
+      <find>day</find>
+      <find>wrap</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -93,14 +120,14 @@
         <option value="$PROJECT_DIR$/src/styles/parts/done.sass" />
         <option value="$PROJECT_DIR$/src/templates/picture-detail.pug" />
         <option value="$PROJECT_DIR$/src/styles/parts/picture-detail.sass" />
-        <option value="$PROJECT_DIR$/src/styles/parts/option.sass" />
         <option value="$PROJECT_DIR$/src/templates/profile.pug" />
         <option value="$PROJECT_DIR$/src/styles/parts/login.sass" />
-        <option value="$PROJECT_DIR$/src/templates/video-step1.pug" />
-        <option value="$PROJECT_DIR$/src/styles/parts/steps.sass" />
         <option value="$PROJECT_DIR$/src/templates/profile-edit.pug" />
         <option value="$PROJECT_DIR$/src/styles/parts/profile.sass" />
         <option value="$PROJECT_DIR$/src/templates/video-step2.pug" />
+        <option value="$PROJECT_DIR$/src/styles/parts/steps.sass" />
+        <option value="$PROJECT_DIR$/src/templates/video-step1.pug" />
+        <option value="$PROJECT_DIR$/src/styles/parts/option.sass" />
       </list>
     </option>
   </component>
@@ -354,12 +381,12 @@
       <workItem from="1510254950513" duration="33000" />
       <workItem from="1517145298281" duration="1500000" />
       <workItem from="1517247639754" duration="10418000" />
-      <workItem from="1520084412722" duration="5974000" />
+      <workItem from="1520084412722" duration="6524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85052000" />
+    <option name="totallyTimeSpent" value="85602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -688,14 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/parts/steps.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="204" column="22" lean-forward="false" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/comps/section.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
@@ -716,22 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/video-step1.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/parts/option.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="82" column="9" lean-forward="false" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -764,6 +767,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="48" lean-forward="false" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/parts/steps.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/video-step1.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="354" column="54" lean-forward="false" selection-start-line="354" selection-start-column="54" selection-end-line="354" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/parts/option.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="164" column="29" lean-forward="false" selection-start-line="164" selection-start-column="29" selection-end-line="164" selection-end-column="29" />
           <folding />
         </state>
       </provider>
