@@ -68,17 +68,31 @@
       +flex(center, center)
       +size(100% 150px)
       overflow: hidden
+      position: relative
 
-      &-img
-        +size(100% auto)
+      &-content
+        +flex(center, center)
+        +size(100% 100%)
 
       &-loading
-        color: inherit
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        +flex(center, center)
+        +size(100% 100%)
+        background-color: white
 
-      &-text
-        margin: 0
-        padding-left: 15px
-        font-style: italic
+        &-img
+          +size(100% auto)
+
+        &-image
+          color: inherit
+
+        &-text
+          margin: 0
+          padding-left: 15px
+          font-style: italic
 
   &-paths
     max-width: 350px
