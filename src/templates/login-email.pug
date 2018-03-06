@@ -15,14 +15,16 @@ block sectionContent
 				label(for="username").login-form-label= "Login"
 				.login-form-input.view-username
 					input(type="text", name="username", id="username").login-form-input-in
-				p.error-message Špatné heslo
+				ul.errorlist
+					li The two password fields didn't match
 
 			.login-form-wrap
 				label(for="password").login-form-label= "Password"
 				.login-form-input.view-password
 					input(type="password", name="password", id="password").login-form-input-in
 
-				p.error-message Špatné heslo
+				ul.errorlist
+					li The two password fields didn't match
 
 			.login-form-backup
 				.login-form-backup-check
