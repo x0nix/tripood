@@ -142,8 +142,10 @@ block sectionOuterContent
                 .option-checkpoint
                     .option-checkpoint-map
                         .option-checkpoint-map-loading
-                            +shape('loading')
-                        p.option-checkpoint-map-text Maps loading
+                            .option-checkpoint-map-loading-image
+                              +shape('loading')
+                            p.option-checkpoint-map-loading-text Maps loading
+                        .option-checkpoint-map-content
 
             .option-item
                 .option-item-in
