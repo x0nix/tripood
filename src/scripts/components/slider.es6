@@ -28,7 +28,7 @@ module.exports = class Slider extends Component {
                 selector.val(ui.value);
             },
             min: 1,
-            max: 100,
+            max: 10,
         });
     }
 }
